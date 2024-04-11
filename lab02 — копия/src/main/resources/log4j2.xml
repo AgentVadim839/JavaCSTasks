@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <!-- Первый файловый аппендер -->
+        <File name="File" fileName="target/logs.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} [%L] - [%M] %msg%n"/>
+        </File>
+
+        <!-- Второй файловый аппендер -->
+        <File name="SecondFile" fileName="target/second_logs.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} [%L] - [%M] %msg%n"/>
+        </File>
+
+        <!-- Консольный аппендер -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} [%L] - [%M] %msg%n"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <!-- Логгер с именем "FirstLogger", который будет записывать в первый файл -->
+        <Logger name="FirstLogger" level="info" additivity="false">
+            <AppenderRef ref="File"/>
+            <AppenderRef ref="Console"/>
+        </Logger>
+
+        <!-- Логгер с именем "SecondLogger", который будет записывать во второй файл -->
+        <Logger name="SecondLogger" level="info" additivity="false">
+            <AppenderRef ref="SecondFile"/>
+            <AppenderRef ref="Console"/>
+        </Logger>
+
+        <Root level="info">
+            <!-- Прикрепляем консольный аппендер -->
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

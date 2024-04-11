@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.me.lab02.AppController">
+   <children>
+      <Label layoutX="27.0" layoutY="13.0" text="Назва:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="57.0" text="Ціна:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameField" layoutX="81.0" layoutY="11.0" prefHeight="25.0" prefWidth="92.0" />
+      <TextField fx:id="priceField" layoutX="81.0" layoutY="55.0" prefHeight="25.0" prefWidth="92.0" />
+      <Button fx:id="buttonAdd" layoutX="256.0" layoutY="12.0" mnemonicParsing="false" onAction="#buttonAdd" prefHeight="25.0" prefWidth="103.0" text="Додати" />
+      <Button fx:id="getAllButton" layoutX="256.0" layoutY="56.0" mnemonicParsing="false" onAction="#getAllButton" prefHeight="25.0" prefWidth="103.0" text="Вивести все" />
+      <Button fx:id="morePriceButton" layoutX="256.0" layoutY="98.0" mnemonicParsing="false" onAction="#morePriceButton" prefHeight="25.0" prefWidth="103.0" text="Ціна більше 15" />
+      <Label fx:id="taskStatus" layoutX="18.0" layoutY="133.0" prefHeight="17.0" prefWidth="218.0" text="Результат операції" textAlignment="CENTER" />
+      <Label fx:id="dataError" layoutX="236.0" layoutY="151.0" prefHeight="228.0" prefWidth="277.0" text="ПОМИЛКА ВВЕДЕНИХ ДАНИХ!!111" textFill="#fc0101" visible="false" wrapText="true">
+         <font>
+            <Font name="System Bold" size="44.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="appleList" editable="false" layoutX="29.0" layoutY="165.0" prefHeight="200.0" prefWidth="200.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="22.0" layoutY="99.0" text="Номер:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonByNumber" layoutX="236.0" layoutY="141.0" mnemonicParsing="false" onAction="#buttonFindByNumber" prefHeight="25.0" prefWidth="125.0" text="Знайти по номеру" />
+      <Button fx:id="clearButton" layoutX="396.0" layoutY="12.0" mnemonicParsing="false" onAction="#clearButton" text="Відчистити" />
+      <Button fx:id="lessPriceButton" layoutX="377.0" layoutY="97.0" mnemonicParsing="false" onAction="#lessPriceButton" prefHeight="25.0" prefWidth="115.0" text="Ціна меньше 15" />
+      <TextField fx:id="numberField" layoutX="81.0" layoutY="97.0" prefHeight="25.0" prefWidth="92.0" />
+      <Button fx:id="replaceButton" layoutX="396.0" layoutY="56.0" mnemonicParsing="false" onAction="#replaceButton" prefHeight="25.0" prefWidth="76.0" text="Замінити" />
+      <Button fx:id="addByNumber" layoutX="377.0" layoutY="141.0" mnemonicParsing="false" onAction="#addByNumber" text="Додати за номером" />
+   </children>
+</AnchorPane>
